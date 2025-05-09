@@ -21,3 +21,6 @@ Route::post('/user/store', [UserController::class, 'store'])->name('user.store')
 
 Route::get('/admin/create', [AdminController::class, 'create'])->name('admin.create');
 Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store');
+
+Route::get('/', [ProductController::class, 'index']);
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.detail');
